@@ -27,10 +27,10 @@ const setSuccess = element => {
     inputControl.classList.remove('error');
 };
 
-const isValidPassword = password => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(password).toLowerCase());
-}
+// const isValidPassword = password => {
+//     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     return re.test(String(password).toLowerCase());
+// }
 
 const validateInputs = () => {
     const usernameValue = username.value.trim();
@@ -44,8 +44,8 @@ const validateInputs = () => {
 
     if (passwordValue === '') {
         setError(password, 'Please enter your password');
-    } else if (!isValidPassword(passwordValue)) {
-        setError(password, 'Provide a valid password address');
+    // } else if (!isValidPassword(passwordValue)) {
+    //     setError(password, 'Provide a valid password address');
     } else {
         setSuccess(password);
         window.location.href = "login.html";
@@ -65,7 +65,7 @@ subscribeBtn.addEventListener('click', (e) => {
 
     password = password.value;
     localStorage.setItem('password', password);
-    alert('User created successfully.');
+    // alert('User created successfully.');
 
 });
 

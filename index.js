@@ -65,7 +65,7 @@ subscribeBtn.addEventListener('click', (e) => {
 
     password = password.value;
     localStorage.setItem('password', password);
-    // alert('User created successfully.');
+    
 
 });
 
